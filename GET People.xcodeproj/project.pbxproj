@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		85C39A8F27713249008FC2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39A8E27713249008FC2E5 /* AppDelegate.swift */; };
 		85C39A9127713249008FC2E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39A9027713249008FC2E5 /* SceneDelegate.swift */; };
-		85C39A9327713249008FC2E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39A9227713249008FC2E5 /* ViewController.swift */; };
+		85C39A9327713249008FC2E5 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39A9227713249008FC2E5 /* PeopleViewController.swift */; };
 		85C39A9627713249008FC2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39A9427713249008FC2E5 /* Main.storyboard */; };
 		85C39A9827713250008FC2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C39A9727713250008FC2E5 /* Assets.xcassets */; };
 		85C39A9B27713250008FC2E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C39A9927713250008FC2E5 /* LaunchScreen.storyboard */; };
+		85C39AA327713348008FC2E5 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C39AA227713348008FC2E5 /* PeopleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85C39A8B27713249008FC2E5 /* GET People.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GET People.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C39A8E27713249008FC2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C39A9027713249008FC2E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85C39A9227713249008FC2E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85C39A9227713249008FC2E5 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		85C39A9527713249008FC2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85C39A9727713250008FC2E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85C39A9A27713250008FC2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85C39A9C27713250008FC2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C39AA227713348008FC2E5 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				85C39A8E27713249008FC2E5 /* AppDelegate.swift */,
 				85C39A9027713249008FC2E5 /* SceneDelegate.swift */,
-				85C39A9227713249008FC2E5 /* ViewController.swift */,
+				85C39A9227713249008FC2E5 /* PeopleViewController.swift */,
 				85C39A9427713249008FC2E5 /* Main.storyboard */,
 				85C39A9727713250008FC2E5 /* Assets.xcassets */,
 				85C39A9927713250008FC2E5 /* LaunchScreen.storyboard */,
 				85C39A9C27713250008FC2E5 /* Info.plist */,
+				85C39AA227713348008FC2E5 /* PeopleModel.swift */,
 			);
 			path = "GET People";
 			sourceTree = "<group>";
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C39A9327713249008FC2E5 /* ViewController.swift in Sources */,
+				85C39A9327713249008FC2E5 /* PeopleViewController.swift in Sources */,
 				85C39A8F27713249008FC2E5 /* AppDelegate.swift in Sources */,
+				85C39AA327713348008FC2E5 /* PeopleModel.swift in Sources */,
 				85C39A9127713249008FC2E5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
