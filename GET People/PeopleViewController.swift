@@ -11,7 +11,7 @@ class PeopleViewController: UITableViewController {
 
     var peopleList: [Result]? = []
     var url = URL(string: "https://swapi.dev/api/people/?format=json")
-    var nextPage = true
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,12 +23,7 @@ class PeopleViewController: UITableViewController {
     
     func loadData(){
   
-        //to get all people from different pages
         for i in 1...8{
-            
-         self.nextPage = false
-         print(i)
-    
         // create a URLSession to handle the request tasks
                let session = URLSession.shared
         // create a "data task" to make the request and run completion handler
@@ -51,10 +46,8 @@ class PeopleViewController: UITableViewController {
                          self.tableView.reloadData()
                         }
                         
-                        if !jesonResult.next.isEmpty{
-                            self.nextPage = true
-                            self.url = URL(string: jesonResult.next)
-                        }
+                       self.url = URL(string: jesonResult.next)
+                        
                      
                     } catch {
                         print(error)
