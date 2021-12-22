@@ -23,11 +23,9 @@ class PeopleViewController: UITableViewController {
     
     func loadData(){
   
-        for i in 1...8{
-        // create a URLSession to handle the request tasks
-               let session = URLSession.shared
-        // create a "data task" to make the request and run completion handler
-                let task = session.dataTask(with: url!, completionHandler: {
+        for i in 1...9{
+    
+            let task = PeopleModel.getAllPeople(pageIndex: i, completionHandler: {
                     // see: Swift closure expression syntax
                     data, response, error in
                     // data -> JSON data, response -> headers and other meta-information, error-> if one occurred
@@ -45,19 +43,11 @@ class PeopleViewController: UITableViewController {
                         DispatchQueue.main.async {
                          self.tableView.reloadData()
                         }
-                        
-                       self.url = URL(string: jesonResult.next)
-                        
-                     
+                      
                     } catch {
                         print(error)
                     }
                 })
-        
-        // execute the task and wait for the response before
-               // running the completion handler. This is async!
-               task.resume()
-            
         }
     }
 

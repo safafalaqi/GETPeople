@@ -7,11 +7,22 @@
 
 import Foundation
 
+class PeopleModel{
+    
+    static func getAllPeople(pageIndex:Int,completionHandler:@escaping  (_ data: Data? , _ response:URLResponse?, _ error:Error?) -> Void){
+        let url = URL(string: "https://swapi.dev/api/people/?page=\(pageIndex)&format=json")
+        let session = URLSession.shared
+        let task = session.dataTask(with: url!, completionHandler:completionHandler)
+        task.resume()
+    }
+    
+}
+
 // MARK: - Welcome
 struct People: Codable {
     let count: Int
-    let next: String
-    let previous: JSONNull?
+    let next: String?
+    let previous: String?
     let results: [Result]
 }
 
@@ -67,3 +78,5 @@ class JSONNull: Codable, Hashable {
         try container.encodeNil()
     }
 }
+
+
